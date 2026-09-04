@@ -1,0 +1,16 @@
+[package]
+name = "portwhisper"
+version = "1.0.0"
+edition = "2021"
+description = "Explain listening ports and their network exposure"
+license = "MIT"
+repository = "https://github.com/al1re3a/portwhisper"
+keywords = ["ports", "network", "security", "cli"]
+categories = ["command-line-utilities", "network-programming"]
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "portwhisper"
+path = "src/main.rs"
