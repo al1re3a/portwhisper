@@ -1,5 +1,7 @@
 # PortWhisper
 
+[![CI](https://github.com/al1re3a/portwhisper/actions/workflows/ci.yml/badge.svg)](https://github.com/al1re3a/portwhisper/actions/workflows/ci.yml) [![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Explain which TCP ports are listening, which process owns them when the operating system reports it, and whether they are bound locally or exposed to a network.
 
 ```console
