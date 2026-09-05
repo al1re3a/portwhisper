@@ -138,10 +138,10 @@ pub fn discover() -> io::Result<Vec<Listener>> {
     let (program, args, parser): (&str, &[&str], Parser) =
         ("netstat", &["-ano", "-p", "tcp"], parse_windows_netstat);
     #[cfg(target_os = "linux")]
-    let (program, args, parser): (&str, &[&str], fn(&str) -> Vec<Listener>) =
+    let (program, args, parser): (&str, &[&str], Parser) =
         ("ss", &["-lntpH"], parse_linux_ss);
     #[cfg(target_os = "macos")]
-    let (program, args, parser): (&str, &[&str], fn(&str) -> Vec<Listener>) =
+    let (program, args, parser): (&str, &[&str], Parser) =
         ("lsof", &["-nP", "-iTCP", "-sTCP:LISTEN"], parse_macos_lsof);
     #[cfg(not(any(target_os = "windows", target_os = "linux", target_os = "macos")))]
     return Err(io::Error::new(
